@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUMAH MAKAN</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+      <nav class="navbar navbar-expand-lg sticky-top" style="background-color: rgb(120, 59, 177);">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#beranda">
+            KEDAI NYONYA RUMAH
+            </a>
+
+       <!-- Button Hamburger -->
+            <button class="nav-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+       <!-- Bagian Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link text-white" href="index.html">Berannda</a>
+                    <a class="nav-link text-white" href="index.html#tentangkami">Tentang Kami</a>
+                    <a class="nav-link text-white" href="index.html#daftarmenu">Daftar Menu</a>
+                    <a class="nav-link text-white" href="index.html#kontak">Kontak</a>
+                </div>
+            </div>
+        </div>
+    </nav>>
+
+    <section>
+<div class="container">
+        <div class="row justify-content-center align-items-center">
+
+            <!-- FORM -->
+            <div class="col-md-5">
+                <div class="login-card p-4 shadow">
+                    <h3 class="text-center mb-4">Register</h3>
+
+                    <form id="form-box" onsubmit="return register()">
+                        <div class="mb-3">
+                            <label>Username</label>
+                            <input type="text" id="username" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                                <label>No. Ponsel</label>
+                                <input type="tel" id="nohp" class="form-control">
+                            </div>
+
+                        <div class="mb-3">
+                            <label>Password</label>
+                            <input type="password" id="password" class="form-control">
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <button type="submit" class="btn btn-primary form-control" style="background-color:rgb(120, 41, 194);">Login</button>
+                        </div>
+
+                        </form> 
+                        <p class="text-center mt-3">
+                            Sudah punya akun? <a href="login.html">Login DI Sini</a>
+                        </p>
+                    </section>
+
+
+                <script src="js/register.js"></script>
+
+<!--FOOTER-->
+    <footer class="footer text-white py-4" style="background-color:rgb(120, 78, 160);">
+        <div class="container text-center">
+            <p class="mb-1">&copy; 2026 Kedai Nyonya Rumah</p>
+        </div>
+    </footer>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<!-- JAVASCRIPT LOGIN -->
+    <script>
+        function register(){
+            
+            let username = document.getElementById("username").value.trim()
+            let nohp = document.getElementById("nohp").value.trim()
+            let password = document.getElementById("password").value.trim()
+
+            // validasi kosong
+            if(!username || !nohp || !password){
+                alert("Semua data harus diisi")
+                return false
+            }
+
+            // ambil akun
+            let akun = JSON.parse(localStorage.getItem("akun")) || []
+
+            // cek duplikat ponsel (username/password)
+            let cek = akun.find(user => user.username === username && user.password === password)
+
+            if(cek){
+                alert("username sudah terdaftar")
+                return false
+            }
+
+            // simpan user
+            let user = {
+                username,
+                nohp,
+                password
+            }
+
+            akun.push(user)
+            localStorage.setItem("akun", JSON.stringify(akun))
+
+            alert("Registrasi berhasil")
+
+            // pindah ke halaman login setelah registrasi
+            window.location.href = "login.html"
+
+            return false
+        }
+    </script>
+</body>
+</html>
+
+</body>
+</html>
+
