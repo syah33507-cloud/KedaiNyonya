@@ -1,0 +1,176 @@
+/* Kasih warna Section */
+.bg-satu {
+    background-color:#d593fc; 
+}
+
+.bg-dua {
+    background-color:#ebbaff;
+}
+
+.header-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.logo-img {
+    width: 75%;
+    object-fit: cover;
+    border: 5px solid #cfa9df;
+    box-shadow: 0 10px 25px rgb(145, 77, 177);
+    transition: all 0.3s ease;
+}
+
+.card {
+    border:1px solid #5a1c72;
+    box-shadow: 0 0 10px rgb(215, 144, 243);
+    text-align: center;
+}
+
+.map-area iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    border: 0;
+}
+
+.footer {
+    background-color:rgb(169, 126, 194);
+    color:#b1acac;
+}
+
+/* Biar section setinggi layar */
+.login-section {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* Gambar login */
+.logo-login {
+    max-width: 70%;
+    height: auto;
+}
+
+/* Card */
+.login-card {
+    border-radius: 5px;
+    background: #ffffff;
+
+}
+
+.register-section {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* Gambar login */
+.register-login {
+    max-width: 80%;
+    height: auto;
+}
+
+/* Card */
+.register-card {
+    border-radius: 5px;
+    background: #ffffff;
+}
+
+  @media (max-width: 600px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+}
+
+   body{
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        .navbar{
+            background-color: rgb(158, 102, 179);
+            padding: 15px 0;
+        }
+
+        .navbar-brand{
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* Section Pesanan */
+        .container-order{
+            width: 90%;
+            max-width: 900px;
+            margin: 40px auto;
+            background: rgb(190, 134, 212);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .judul{
+            color: white;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        /* Tabel */
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th{
+            background: rgb(173, 81, 216);
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        td{
+            background: white;
+            padding: 12px;
+            text-align: center;
+        }
+
+        tr:nth-child(even) td{
+            background: #fff3ee;
+        }
+
+        /* Tombol */
+        .btn-kembali{
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            background: rgb(173, 81, 216);
+            color: #fffbf5;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .btn-checkout{
+            margin-top: 20px;
+            background: white;
+            color: rgb(173, 81, 216);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn-checkout:hover{
+            background: #a066c2;
+        }
